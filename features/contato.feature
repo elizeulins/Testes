@@ -11,19 +11,26 @@ Feature: Entrando em contato com o hotel
         And: I click the submit button.
         Then: A call completed message appears.
 
-    #Incorrect telefone scenario
-    Scenario:Login with wrong phone
+    #Incorrect PHONE scenario
+    Scenario:Fill in wrong phone
         Given: I look for the tab to contact the hotel
         When: I fill in the data: correct name, email, subject, description but wrong phone number.
         And: I click the submit button.
         Then: an error message appears on the screen stating that the phone is in the wrong format.
 
-    #Incorrect email scenario
-    Scenario:Login with wrong email
+    #Incorrect EMAIL scenario
+    Scenario:Fill in wrong email
         Given: I look for the tab to contact the hotel
-        When: I fill in the data: correct name, telefone, subject, description but wrong email number.
+        When: I fill in the data: correct name, phone, subject, description, but email with incorrect format.
         And: I click the submit button.
         Then: an error message appears on the screen stating that the email is in the wrong format.
+
+    #Incorrect MESSAGE scenario
+    Scenario:Fill with empty message
+        Given: I look for the tab to contact the hotel
+        When: I fill in the data: correct name, email, phone, subject, but I leave the description field empty.
+        And: I click the submit button.
+        Then: an error message appears on the screen informing you to fill in the empty fields correctly.    
 
 #contacting the hotel without filling in the fields
     Scenario:Contacting the hotel without filling in the fields

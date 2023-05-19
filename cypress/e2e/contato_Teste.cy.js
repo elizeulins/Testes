@@ -30,12 +30,21 @@ describe('Entrando no site RestFull - aluguel de quartos', () => {
         cy.get('#submitContact').type('button').click();
     });
 
+    it('deve exibir mensagem de erro para preencher o campo MESSAGE', () => {
+        cy.get('#name').type('Elizeu Lins')
+        cy.get('#email').type('Elizeu@')
+        cy.get('#phone').type('3425')
+        cy.get('#subject').type('Assunto')
+        cy.get('#description')
+        cy.get('#submitContact').type('button').click();
+    });
+
     it('deve exibir mensagem de erro para OS CAMPOS VAZIOS', () => {
-        cy.get('#name').type('')
-        cy.get('#email').type('')
-        cy.get('#phone').type('')
-        cy.get('#subject').type('')
-        cy.get('#description').type('');
+        cy.get('#name')
+        cy.get('#email')
+        cy.get('#phone')
+        cy.get('#subject')
+        cy.get('#description')
         cy.get('#submitContact').type('button').click();
     });
 })
