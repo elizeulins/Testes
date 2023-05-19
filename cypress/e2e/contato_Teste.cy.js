@@ -1,3 +1,4 @@
+
 describe('Entrando no site RestFull - aluguel de quartos', () => {
     beforeEach('Acessando o site', () => {
         cy.visit('https://automationintesting.online/');
