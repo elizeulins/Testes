@@ -1,4 +1,5 @@
 #given: dado, when: quando, then: então
+
 Feature: Entrando em contato com o hotel
 
     Background: Visit the Site automationintesting
